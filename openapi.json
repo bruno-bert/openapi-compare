@@ -34,7 +34,22 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/components/schemas/Customer"
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "status": {
+                                                "type": "string"
+                                            },
+                                            "hiredate": {
+                                                "type": "string",
+                                                "format": "date"
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -49,12 +64,25 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CustomerInput"
-                            }
-                        },
-                        "application/xml": {
-                            "schema": {
-                                "$ref": "#/components/schemas/CustomerInput"
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "hiredate": {
+                                            "type": "string",
+                                            "format": "date"
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -86,7 +114,25 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CustomerInput"
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "hiredate": {
+                                            "type": "string",
+                                            "format": "date"
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -119,43 +165,6 @@
                     },
                     "404": {
                         "description": "Customer not found"
-                    }
-                }
-            }
-        }
-    },
-    "components": {
-        "schemas": {
-            "Customer": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "status": {
-                        "type": "string"
-                    },
-                    "hiredate": {
-                        "type": "string",
-                        "format": "date"
-                    }
-                }
-            },
-            "CustomerInput": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    },
-                    "status": {
-                        "type": "string"
-                    },
-                    "hiredate": {
-                        "type": "string",
-                        "format": "date"
                     }
                 }
             }
