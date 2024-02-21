@@ -97,8 +97,8 @@ async function main() {
         const mainSpec = await fetchOpenApiSpec('https://github.com/bruno-bert/openapi-compare');
 
         // List of bitbucket repository URLs
-        const bitbucketRepos = ['https://github.com/bruno-bert/openapi-compare1',
-            'https://github.com/bruno-bert/openapi-compare2', /* Add more repo URLs as needed */];
+        const bitbucketRepos = ['https://github.com/bruno-bert/openapi-compare-1',
+            'https://github.com/bruno-bert/openapi-compare-2', /* Add more repo URLs as needed */];
 
         for (const repoUrl of bitbucketRepos) {
             const discrepancies = await analyzeRepository(repoUrl, mainSpec);
